@@ -50,7 +50,7 @@
       left: 0;
       right: 0;
       z-index: 1000;
-      background: rgba(7, 16, 31, 0.88);
+      background: rgba(7, 16, 31, 0.92);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
       padding: 18px 60px;
@@ -105,7 +105,7 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
-      padding: 120px 60px 80px;
+      padding: 150px 60px 90px;
       position: relative;
       overflow: hidden;
     }
@@ -114,8 +114,8 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 20% 20%, rgba(201, 168, 76, 0.12), transparent 35%),
-        radial-gradient(circle at 80% 70%, rgba(22, 42, 82, 0.7), transparent 40%),
+        radial-gradient(circle at 20% 20%, rgba(201, 168, 76, 0.14), transparent 35%),
+        radial-gradient(circle at 80% 70%, rgba(22, 42, 82, 0.75), transparent 40%),
         #07101f;
       opacity: 1;
     }
@@ -124,7 +124,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(7, 16, 31, 0.9), rgba(10, 22, 40, 0.72));
+      background: linear-gradient(135deg, rgba(7, 16, 31, 0.88), rgba(10, 22, 40, 0.72));
     }
 
     .hero-content {
@@ -593,11 +593,11 @@
       font-weight: 600;
     }
 
-    /* Animations */
+    /* Animations safe version */
     @keyframes fadeInUp {
       from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(24px);
       }
 
       to {
@@ -606,33 +606,35 @@
       }
     }
 
-    .animate-in {
+    .animate-in,
+    .delay-1,
+    .delay-2,
+    .delay-3,
+    .delay-4 {
+      opacity: 1;
+      transform: translateY(0);
       animation: fadeInUp 0.8s ease forwards;
     }
 
     .delay-1 {
       animation-delay: 0.1s;
-      opacity: 0;
     }
 
     .delay-2 {
       animation-delay: 0.2s;
-      opacity: 0;
     }
 
     .delay-3 {
       animation-delay: 0.3s;
-      opacity: 0;
     }
 
     .delay-4 {
       animation-delay: 0.4s;
-      opacity: 0;
     }
 
     .reveal {
-      opacity: 0;
-      transform: translateY(40px);
+      opacity: 1;
+      transform: translateY(0);
       transition: all 0.8s ease;
     }
 
@@ -662,7 +664,7 @@
       }
 
       .hero {
-        padding: 110px 24px 70px;
+        padding: 120px 24px 70px;
       }
 
       .section {
@@ -714,15 +716,4 @@
   <!-- Header -->
   <header class="site-header">
     <div class="logo-area">
-      <div class="logo-text">OSORIO <span class="gold">&amp;</span> KALIL</div>
-      <div class="logo-tagline">Energy Advisors</div>
-    </div>
-
-    <button class="header-cta" onclick="scrollToSection('final-cta')">
-      Request Technical Validation
-    </button>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-bg"><
+      <div class="logo-text">OSORIO <span class="gold">&
