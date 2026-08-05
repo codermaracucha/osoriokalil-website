@@ -78,8 +78,8 @@
       margin-top: 2px;
     }
 
-    .header-cta,
-    .cta-button,
+    .button,
+    .button-secondary,
     .linkedin-button {
       display: inline-flex;
       align-items: center;
@@ -98,23 +98,23 @@
       font-family: inherit;
     }
 
-    .header-cta:hover,
-    .cta-button:hover,
+    .button:hover,
     .linkedin-button:hover {
       background: var(--gold-light);
       transform: translateY(-2px);
       box-shadow: 0 12px 28px rgba(201, 168, 76, 0.24);
     }
 
-    .cta-button.outline {
+    .button-secondary {
       background: transparent;
       color: var(--gold);
       border: 2px solid var(--gold);
     }
 
-    .cta-button.outline:hover {
+    .button-secondary:hover {
       background: var(--gold);
       color: var(--navy-deep);
+      transform: translateY(-2px);
     }
 
     .hero {
@@ -187,7 +187,7 @@
       display: inline-block;
     }
 
-    .hero-cta-group {
+    .hero-actions {
       display: flex;
       gap: 16px;
       flex-wrap: wrap;
@@ -224,7 +224,7 @@
     .role-grid,
     .services-grid,
     .diff-grid,
-    .process-steps {
+    .process-grid {
       display: grid;
       gap: 28px;
     }
@@ -235,12 +235,452 @@
     }
 
     .diff-grid,
-    .process-steps {
+    .process-grid {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    .role-card,
-    .service-card,
+    .card {
+      background: linear-gradient(135deg, var(--navy-mid), var(--navy));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 38px;
+      transition: all 0.25s ease;
+    }
+
+    .card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .card-label {
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .services-section,
+    .process-section {
+      background: var(--navy);
+    }
+
+    .service-number {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--gold-dim);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .service-tag {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 7px 14px;
+      background: var(--gold-dim);
+      color: var(--gold-light);
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
     .diff-card,
     .step-card {
-      background
+      text-align: center;
+    }
+
+    .step-number {
+      width: 76px;
+      height: 76px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 22px;
+      color: var(--gold);
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .final-cta {
+      text-align: center;
+      padding: 120px 60px;
+      background: linear-gradient(135deg, var(--navy-deep), var(--navy-mid));
+      border-top: 1px solid var(--border);
+    }
+
+    .final-cta .section-title {
+      max-width: 760px;
+      margin: 0 auto 22px;
+    }
+
+    .final-cta p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 660px;
+      margin: 0 auto 42px;
+    }
+
+    .final-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .contact-info {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact-item {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .linkedin-button {
+      font-size: 13px;
+      padding: 14px 22px;
+    }
+
+    .site-footer {
+      padding: 30px 60px;
+      background: var(--navy-deep);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-text {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer-motto {
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    @media (max-width: 900px) {
+      .site-header {
+        padding: 16px 22px;
+        gap: 16px;
+      }
+
+      .logo-text {
+        font-size: 16px;
+      }
+
+      .logo-tagline {
+        font-size: 10px;
+      }
+
+      .button {
+        padding: 10px 14px;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 130px 24px 80px;
+      }
+
+      .section,
+      .final-cta {
+        padding: 76px 24px;
+      }
+
+      .role-grid,
+      .services-grid,
+      .diff-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions,
+      .final-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .final-actions {
+        align-items: center;
+      }
+
+      .button,
+      .button-secondary,
+      .linkedin-button {
+        width: 100%;
+        max-width: 420px;
+        text-align: center;
+      }
+
+      .site-footer {
+        padding: 24px;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="logo-area">
+      <div class="logo-text">OSORIO KALIL</div>
+      <div class="logo-tagline">Energy Advisors</div>
+    </div>
+
+    #final-ctaRequest Technical Validation</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-label">Independent Owner's Engineering</div>
+
+        <h1 class="hero-title">
+          Protecting CAPEX.<br>
+          <span class="gold">Mitigating Risk.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          For energy producers anywhere. We validate, audit, and secure your assets before the concrete is poured.
+        </p>
+
+        <div class="motto">No tokens. Creative solutions.</div>
+
+        <div class="hero-actions">
+          #servicesExplore Our Services</a>
+          #processSee Our Process</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="problem">
+      <div class="section-label">The Challenge</div>
+
+      <h2 class="section-title">
+        Two Stakeholders.<br>
+        <span class="gold">One Solution.</span>
+      </h2>
+
+      <p class="section-subtitle">
+        Role-based messaging for the decision-makers who control your asset's future.
+      </p>
+
+      <div class="role-grid">
+        <div class="card">
+          <div class="card-label">For Executives</div>
+          <h3>Mitigate Operational Risk</h3>
+          <p>
+            You need a senior independent voice to validate critical technical decisions before they impact the bottom line.
+            We protect your investment.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-label">For Technical Managers</div>
+          <h3>Technical Load Relief</h3>
+          <p>
+            We are your second pair of eyes. We review engineering deliverables and EPC interfaces independently,
+            ensuring contractor quality without burning out your team.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="section-label">Packaged Services</div>
+
+      <h2 class="section-title">
+        Express Services<br>
+        <span class="gold">for Owners.</span>
+      </h2>
+
+      <p class="section-subtitle">
+        High-value technical packages. Clear scope. Fixed deliverables. Immediate impact.
+      </p>
+
+      <div class="services-grid">
+        <div class="card">
+          <div class="service-number">01</div>
+          <h3>Executive Technical Validation</h3>
+          <div class="card-label">2nd Opinion</div>
+          <p>
+            Independent review of high-impact decisions. Aligns technical reality with business goals.
+            Protects long-term value.
+          </p>
+          <div class="service-tag">Decision Support</div>
+        </div>
+
+        <div class="card">
+          <div class="service-number">02</div>
+          <h3>Independent Contractor Oversight</h3>
+          <div class="card-label">FEED / EPC Review</div>
+          <p>
+            Audits deliverables. Prevents change orders. Ensures compliance with owner standards.
+            Protects your CAPEX.
+          </p>
+          <div class="service-tag">Contractor Control</div>
+        </div>
+
+        <div class="card">
+          <div class="service-number">03</div>
+          <h3>Asset Acquisition Integrity</h3>
+          <div class="card-label">Due Diligence RAG</div>
+          <p>
+            Red-Amber-Green assessment of technical risks for M&amp;A. Know the risk before you buy.
+            Protect the investment.
+          </p>
+          <div class="service-tag">M&amp;A Protection</div>
+        </div>
+
+        <div class="card">
+          <div class="service-number">04</div>
+          <h3>Unbiased Process Safety Assurance</h3>
+          <div class="card-label">HAZOP / HAZID</div>
+          <p>
+            Safety reviews independent of the EPC firm. Schedule does not compromise safety.
+            Long-term operational integrity.
+          </p>
+          <div class="service-tag">Safety First</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="differentiators">
+      <div class="section-label">Why Trust Us</div>
+
+      <h2 class="section-title">
+        Why a Boutique Firm?<br>
+        <span class="gold">Senior. Focused. Unbiased.</span>
+      </h2>
+
+      <p class="section-subtitle">
+        Producers need to know why they should trust an external boutique firm over internal teams or massive EPCs.
+      </p>
+
+      <div class="diff-grid">
+        <div class="card diff-card">
+          <h3>Owner's Mindset</h3>
+          <p>
+            We treat your CAPEX as our own. Your interests drive every decision we make.
+          </p>
+        </div>
+
+        <div class="card diff-card">
+          <h3>40+ Years Senior Credibility</h3>
+          <p>
+            Decades of global experience. Unbiased technical excellence. Zero conflicts of interest.
+          </p>
+        </div>
+
+        <div class="card diff-card">
+          <h3>Execution Focus</h3>
+          <p>
+            Moving beyond theoretical advice. Concrete, actionable reports.
+            Deliverables that move projects forward.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="process">
+      <div class="section-label">Our Process</div>
+
+      <h2 class="section-title">
+        From Contact<br>
+        <span class="gold">to Delivery.</span>
+      </h2>
+
+      <p class="section-subtitle">
+        A clear, three-phase roadmap designed to convert expert profile into tangible results.
+      </p>
+
+      <div class="process-grid">
+        <div class="card step-card">
+          <div class="step-number">1</div>
+          <h3>Focus &amp; Target</h3>
+          <p>Identify needs. Prioritize opportunities. Plan the engagement.</p>
+        </div>
+
+        <div class="card step-card">
+          <div class="step-number">2</div>
+          <h3>Engage &amp; Qualify</h3>
+          <p>Connect. Understand pain points. Align on objectives.</p>
+        </div>
+
+        <div class="card step-card">
+          <div class="step-number">3</div>
+          <h3>Win &amp; Deliver</h3>
+          <p>Propose pilot. Partner. Execute with excellence.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="final-cta">
+      <div class="section-label">Take Action</div>
+
+      <h2 class="section-title">
+        Ready to Secure<br>
+        <span class="gold">Your Asset?</span>
+      </h2>
+
+      <p>
+        Let's discuss your project gray areas, pain points, technical load, budget, or urgency.
+        Start with a small paid pilot.
+      </p>
+
+      <div class="final-actions">
+        info@osoriokalil.com?subject=Technical Validation Request
+          Request a Technical Validation
+        </a>
+      </div>
+
+      <div class="contact-info">
+        <div class="contact-item">info@osoriokalil.com</div>
+
+        <a class="linkedin-button" href="https://www.linkedin.com/company/136046951/" target="_blank" rel="noopener noreferrer">
+          LinkedIn: Osorio Kalil Energy Advisory Group
+        </a>
+
+        <div class="contact-item">Americas, Middle East and Far East Regions</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-text">© 2026 Osorio Kalil Energy Advisors. All rights reserved.</div>
+    <div class="footer-motto">No tokens. Creative solutions.</div>
+  </footer>
+
+</body>
+</html>
