@@ -512,7 +512,7 @@
       color: var(--text);
     }
 
-    /* Prospect Form */
+  /* Prospect Form */
     .prospect-form-section {
       padding: 96px 0;
       background: linear-gradient(180deg, #ffffff 0%, #f7f3ea 100%);
@@ -529,221 +529,36 @@
       text-align: center;
     }
 
-    .prospect-form-eyebrow {
-      display: inline-block;
-      margin-bottom: 14px;
-      color: var(--gold);
-      font-size: 0.78rem;
-      font-weight: 800;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .prospect-form-title {
-      margin: 0;
-      color: var(--black);
-      font-size: clamp(2rem, 4vw, 3.3rem);
-      line-height: 1.05;
-      letter-spacing: -0.04em;
-    }
-
-    .prospect-form-description {
-      max-width: 780px;
-      margin: 18px auto 0 auto;
-      color: var(--text);
-      font-size: 1.08rem;
-      line-height: 1.7;
-    }
-
     .prospect-form-card {
-      overflow: hidden;
+      padding: 40px;
       border-radius: var(--radius-xl);
       background: var(--white);
       border: 1px solid rgba(16, 16, 16, 0.08);
       box-shadow: var(--shadow);
     }
 
-    .prospect-form-frame {
+    .prospect-form-group {
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .prospect-form-group label {
       display: block;
+      margin-bottom: 6px;
+      font-weight: 800;
+      color: var(--black);
+    }
+
+    .prospect-form-group input,
+    .prospect-form-group select {
       width: 100%;
-      min-height: 900px;
-      border: 0;
+      padding: 13px 14px;
+      border: 1px solid rgba(17, 17, 17, 0.18);
+      border-radius: 10px;
+      font: inherit;
+      color: var(--black);
       background: var(--white);
     }
-
-    .prospect-form-note {
-      padding: 18px 24px;
-      color: #666666;
-      background: #faf8f2;
-      border-top: 1px solid rgba(16, 16, 16, 0.08);
-      font-size: 0.94rem;
-      line-height: 1.5;
-      text-align: center;
-    }
-
-    .prospect-form-note a {
-      color: var(--gold);
-      font-weight: 800;
-      text-decoration: none;
-    }
-
-    .prospect-form-note a:hover {
-      text-decoration: underline;
-    }
-<section id="prospect-form" class="prospect-form-section">
-  <div class="prospect-form-container">
-
-    <div class="prospect-form-header">
-      <span class="prospect-form-eyebrow">Contact Us</span>
-      <h2 class="prospect-form-title">Request Technical Validation</h2>
-      <p class="prospect-form-description">
-        Tell us about your project and one of our advisors will contact you.
-      </p>
-    </div>
-
-    <div class="prospect-form-card" style="padding:40px;">
-
-      <form action="https://formsubmit.co/info@osoriokalil<input type="hidden" name="_subject" value="New Prospect - Osorio Kalil Website">
-        <input type="hidden" name="_captcha" value="false">
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Full Name *</strong></label><br>
-          <input type="text" name="Name" required
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Company *</strong></label><br>
-          <input type="text" name="Company" required
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Email *</strong></label><br>
-          <input type="email" name="Email" required
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Phone</strong></label><br>
-          <input type="text" name="Phone"
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Country</strong></label><br>
-          <input type="text" name="Country"
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Service Required *</strong></label><br>
-          <select name="Service" required
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-            <option value="">Select a Service</option>
-            <option>Executive Technical Validation</option>
-            <option>Independent Contractor Oversight</option>
-            <option>Asset Acquisition Integrity</option>
-            <option>Process Safety Assurance</option>
-            <option>Owner's Engineering Advisory</option>
-            <option>Technical Due Diligence</option>
-          </select>
-        </div>
-
-        <div style="margin-bottom:20px;">
-          <label><strong>Project Description *</strong></label><br>
-          <textarea name="Project Description" rows="6" required
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-gold">
-          Submit Request
-        </button>
-
-      </form>
-
-    </div>
-
-  </div>
-
-    <section id="prospect-form" class="prospect-form-section">
-  <div class="prospect-form-container">
-
-    <div class="prospect-form-header">
-      <span class="prospect-form-eyebrow">Contact Us</span>
-      <h2 class="prospect-form-title">Request Technical Validation</h2>
-      <p class="prospect-form-description">
-        Tell us about your project and one of our advisors will contact you.
-      </p>
-    </div>
-
-    <div class="prospect-form-card" style="padding:40px;">
-
-      <form action="https://formsubmit.co/info@osoriokalil<input type="hidden" name="_subject" value="New Prospect - Osorio Kalil Website">
-        <input type="hidden" name="_captcha" value="false">
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Full Name *</strong></label><br>
-          <input type="text" name="Name" required
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Company *</strong></label><br>
-          <input type="text" name="Company" required
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Email *</strong></label><br>
-          <input type="email" name="Email" required
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Phone</strong></label><br>
-          <input type="text" name="Phone"
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Country</strong></label><br>
-          <input type="text" name="Country"
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-        </div>
-
-        <div style="margin-bottom:15px;">
-          <label><strong>Service Required *</strong></label><br>
-          <select name="Service" required
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;">
-            <option value="">Select a Service</option>
-            <option>Executive Technical Validation</option>
-            <option>Independent Contractor Oversight</option>
-            <option>Asset Acquisition Integrity</option>
-            <option>Process Safety Assurance</option>
-            <option>Owner's Engineering Advisory</option>
-            <option>Technical Due Diligence</option>
-          </select>
-        </div>
-
-        <div style="margin-bottom:20px;">
-          <label><strong>Project Description *</strong></label><br>
-          <textarea name="Project Description" rows="6" required
-            style="width:100%;padding:12px;border:1px solid #ddd;border-radius:8px;"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-gold">
-          Submit Request
-        </button>
-
-      </form>
-
-    </div>
-
-  </div>
-</section>
-    
-</section>
     /* Contact */
     .contact {
       padding: 96px 0;
@@ -941,7 +756,7 @@
         #contactContact</a>
       </nav>
 
-      #prospect-formRequest Technical Validation</a>
+      <a href="#prospect-form" class="btn btn-primary">Request Technical Validation</a>
       <span class="mobile-note">Owner's Engineering</span>
     </div>
   </header>
@@ -957,7 +772,7 @@
           </p>
 
           <div class="hero-actions">
-            #prospect-formRequest Technical Validation</a>
+            <a href="#prospect-form" class="btn btn-primary">Request Technical Validation</a>
             #servicesExplore Our Services</a>
           </div>
         </div>
@@ -1075,4 +890,54 @@
             <div class="service-number">04</div>
             <h3>Unbiased Process Safety Assurance</h3>
             <span class="service-tag">HAZOP / HAZID</span>
-        
+         <section id="prospect-form" class="prospect-form-section">
+      <div class="prospect-form-container">
+        <div class="prospect-form-header">
+          <span class="eyebrow">Prospect Form</span>
+          <h2 class="section-title">Request Technical Validation</h2>
+          <p class="section-description">
+            Complete the form and one of our advisors will contact you.
+          </p>
+        </div>
+
+        <div class="prospect-form-card">
+          <form action="https://formsubmit.co/info@osoriokalil.com" method="POST">
+            <input type="hidden" name="_subject" value="New Prospect - Osorio Kalil Website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none">
+
+            <div class="prospect-form-group">
+              <label for="prospect-client">Prospect Client *</label>
+              <input id="prospect-client" type="text" name="Prospect Client" required>
+            </div>
+
+            <div class="prospect-form-group">
+              <label for="company">Company *</label>
+              <input id="company" type="text" name="Company" required>
+            </div>
+
+            <div class="prospect-form-group">
+              <label for="service">Service *</label>
+              <select id="service" name="Service" required>
+                <option value="">Select a Service</option>
+                <option value="Executive Technical Validation">Executive Technical Validation</option>
+                <option value="Independent Contractor Oversight">Independent Contractor Oversight</option>
+                <option value="Asset Acquisition Integrity">Asset Acquisition Integrity</option>
+                <option value="Process Safety Assurance">Process Safety Assurance</option>
+                <option value="Owner's Engineering Advisory">Owner's Engineering Advisory</option>
+                <option value="Technical Due Diligence">Technical Due Diligence</option>
+              </select>
+            </div>
+
+            <div class="prospect-form-group">
+              <label for="email">Email *</label>
+              <input id="email" type="email" name="Email" required>
+            </div>
+
+            <button type="submit" class="btn btn-gold">
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
